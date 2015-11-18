@@ -10,6 +10,7 @@ var config = {
   sassfile:"www/scss/**/*.scss",
   es6file:"www/es6/**/*.js",
   htmlfile:"www/views/*.html",
+  releasedir:"www-release"
 };
 
 gulp.task('es62es5', function(){
@@ -20,7 +21,6 @@ gulp.task('es62es5', function(){
         .pipe(gulp.dest('www/js/'))
         .pipe($.connect.reload())
 });
-
 
 gulp.task('compass', function() {
   gulp.src(config.sassfile)
@@ -55,6 +55,12 @@ gulp.task("connect",function(){
   });
 });
 
+//清除生产目录不必要的文件
+gulp.task('clean', function () {
+    return gulp.src([config.releasedir+"/es6",config.releasedir+"/scss"])
+        .pipe($.clean({force: true}))
+});
+
 gulp.task('build', function(cb){
   rjs.optimize(rjs_config, function(buildResponse){
     // console.log('build response', buildResponse);
@@ -64,4 +70,4 @@ gulp.task('build', function(cb){
 
 gulp.task('default',['watch','connect','compass','es62es5']);
 
-gulp.task('deploy', ['build']);
+gulp.task('deploy', ['build','clean']);
