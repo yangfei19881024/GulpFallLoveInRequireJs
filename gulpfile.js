@@ -64,6 +64,6 @@ gulp.task('build', function(cb){
   }, cb);
 });
 
-gulp.task('server',['watch','connect','compass']);
+gulp.task('server',['watch','connect','compass','es62es5']);
 
-gulp.task('build', ['build']);
+gulp.task('deploy', ['build']);

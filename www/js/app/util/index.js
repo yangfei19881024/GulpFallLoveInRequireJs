@@ -1,5 +1,7 @@
-define(function(require,exports,module){
+"use strict";
+
+define(function (require, exports, module) {
   var $ = require("jquery");
-  $("#title").css("background","black");
+  $("#title").css("background", "black");
   document.getElementById("title").style.color = "red";
-})
+});
