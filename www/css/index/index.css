@@ -17,13 +17,13 @@ footer {
 }
 
 h1 {
-  color: #FFF;
+  color: yellow;
   background: red;
   font-size: 20px;
 }
 
 p {
   color: red;
-  background: black;
+  background: #FFF;
   border: 1px solid pink;
 }

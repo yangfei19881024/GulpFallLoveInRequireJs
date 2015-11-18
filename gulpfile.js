@@ -37,8 +37,7 @@ gulp.task('compass', function() {
 });
 
 gulp.task('html', function() {
-    return gulp.src('views/**/*.html')
-        .pipe(gulp.dest(''))
+    return gulp.src(config.htmlfile)
         .pipe($.connect.reload())
 });
 
@@ -52,7 +51,7 @@ gulp.task("watch",function(){
 gulp.task("connect",function(){
   $.connect.server({
     root:config.root,
-    port: 3000,
+    port: 8005,
     livereload: true
   });
 });
@@ -64,6 +63,6 @@ gulp.task('build', function(cb){
   }, cb);
 });
 
-gulp.task('server',['watch','connect','compass','es62es5']);
+gulp.task('default',['watch','connect','compass','es62es5']);
 
 gulp.task('deploy', ['build']);
