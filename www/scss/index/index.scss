@@ -1,0 +1,29 @@
+@import "../common";
+$color: red;
+$bluecolor: blue;
+nav{
+  color:$color;
+  background:red;
+  @include display-flex(inline-flex);
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+footer{
+  background:#CCC !important;
+  color:pink;
+  font-size:14px;
+  border:1px solid red;
+}
+
+h1{
+  color:#FFF;
+  background:$color;
+  font-size:20px;
+}
+
+p{
+  color:$color;
+  background:black;
+  border:1px solid pink;
+}

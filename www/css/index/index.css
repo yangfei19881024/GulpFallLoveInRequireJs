@@ -1,0 +1,29 @@
+nav {
+  color: red;
+  background: red;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+footer {
+  background: #CCC !important;
+  color: pink;
+  font-size: 14px;
+  border: 1px solid red;
+}
+
+h1 {
+  color: #FFF;
+  background: red;
+  font-size: 20px;
+}
+
+p {
+  color: red;
+  background: black;
+  border: 1px solid pink;
+}
