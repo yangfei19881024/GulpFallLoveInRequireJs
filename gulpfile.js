@@ -10,7 +10,6 @@ var config = {
   sassfile:"www/scss/**/*.scss",
   es6file:"www/es6/**/*.js",
   htmlfile:"www/views/*.html",
-  dist:"./dist"
 };
 
 gulp.task('es62es5', function(){
